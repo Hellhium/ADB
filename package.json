@@ -1,0 +1,15 @@
+{
+  "name": "albion-bot",
+  "version": "0.0.1",
+  "description": "Albion Discord Bot",
+  "main": "abot.js",
+  "scripts": {
+  },
+  "author": "Noita",
+  "license": "",
+  "dependencies": {
+    "discord.js": "^11.1.0",
+    "jsonfile": "^3.0.1",
+    "moment": "^2.18.1"
+  }
+}

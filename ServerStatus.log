@@ -1,0 +1,25 @@
+Albion Online Status:
+        ---------------------------------
+        Error; null
+        Status Code; 200
+        Response Body; ﻿{ "status": "offline", "message": "Server is currently unavailable due to a server update." }
+
+        ---------------------------------Albion Online Status:
+        ---------------------------------
+        Error; null
+        Status Code; 200
+        Response Body; ﻿{ "status": "online", "message": "All good." }
+
+        ---------------------------------Albion Online Status:
+        ---------------------------------
+        Error; null
+        Status Code; 200
+        Response Body; ﻿{ "status": "offline", "message": "Server is currently restarting and should be back shortly" }
+
+        ---------------------------------Albion Online Status:
+        ---------------------------------
+        Error; null
+        Status Code; 200
+        Response Body; ﻿{ "status": "online", "message": "All good." }
+
+        ---------------------------------
