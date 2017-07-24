@@ -4,7 +4,6 @@ var s = require("./config/settings.json");
 var request = require('request');
 var fs = require('fs')
 var jsonfile = require('jsonfile');
-//change this file to load from settings (Done)
 var file = "./status.json";
 var moment = require('moment');
 
@@ -51,15 +50,16 @@ function retGameStatus(meh) {
 }
 
 client.on('ready', () => {
-    //change dr gray to load from settings (done)
+    //
     console.log(`Welcome, ${s.hostsName}
     https://discordapp.com/oauth2/authorize?client_id=${s.cid}&scope=bot
     `)
-    //change StatusChannel to load from settings
+    //
     const StatusChannel = client.channels.get(s.statusCh)
     setInterval(() => {
         retGameStatus((meh) => {
             if (meh != null) {
+                // --Enable if you want to have a clean channel.
                 //StatusChannel.bulkDelete(100)
                 StatusChannel.send(`Game Status: ${meh.status}\nGame Server Response: ${meh.message}\n${moment().format("LLLL")}`)
             } else {
@@ -68,20 +68,21 @@ client.on('ready', () => {
         })
     }, 10000)
 })
-
+//Handles message events, basically, commands and results.
 client.on('message', (message) => {
     var contents = message.content
     var split = contents.split(' ')
-    //Change this command to load from settings (done)
     if (contents.match('!CR') && message.author.id == s.hostsID) {
         if (message.guild.roles)
             var roleName = split[1]
         crRole(roleName)
     }
+    
     if (contents.startsWith('!GR')) {
         console.log(message.mentions.roles.forEach(role => {
-            message.member.addRole(role) && message.react('👍')
+            message.member.addRole(role)
         }))
+        message.react('👍')
     }
     //Message Functions below
     function sendCh(c) {
