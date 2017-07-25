@@ -22,4 +22,11 @@ Albion Online Status:
         Status Code; 200
         Response Body; ﻿{ "status": "online", "message": "All good." }
 
+        ---------------------------------Albion Online Status:
+        ---------------------------------
+        Error; null
+        Status Code; 200
+        Response Body; ﻿{ "status": "online", "message": "All good." }
+
+        Tuesday, July 25, 2017 6:51 AM
         ---------------------------------
