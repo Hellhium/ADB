@@ -20,9 +20,9 @@ function retGameStatus(meh) {
     request('http://live.albiononline.com/status.txt', (error, response, body) => {
         console.log(`Albion Online Status:
         ---------------------------------
-        Error; ${error}
-        Status Code; ${response && response.statusCode}
-        Response Body; ${response.body}
+        Error- ${error}
+        Status Code- ${response && response.statusCode}
+        Response Body- ${response.body}
         ${moment().format("LLLL")}
         ---------------------------------`);
         var siteResponse = JSON.parse(body.trim());
