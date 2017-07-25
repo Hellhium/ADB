@@ -33,7 +33,7 @@ function retGameStatus(meh) {
                 });
                 console.log(`Updated file.`);
                 meh(siteResponse);
-                fs.appendFile("./ServerStatus.log", `Albion Online Status:
+                fs.appendFile("./ServerStatus.log", `\nAlbion Online Status:
         ---------------------------------
         Error; ${error}
         Status Code; ${response && response.statusCode}
